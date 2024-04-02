@@ -13,6 +13,7 @@
 		173B65CF2BBC27F0000E6FC5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 173B65CE2BBC27F0000E6FC5 /* Base */; };
 		173B65D12BBC27F2000E6FC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173B65D02BBC27F2000E6FC5 /* Assets.xcassets */; };
 		173B65D42BBC27F2000E6FC5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 173B65D32BBC27F2000E6FC5 /* Base */; };
+		173B65DF2BBC9696000E6FC5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173B65DE2BBC9696000E6FC5 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		173B65D02BBC27F2000E6FC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		173B65D32BBC27F2000E6FC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		173B65D52BBC27F2000E6FC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		173B65DE2BBC9696000E6FC5 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		173B65C62BBC27F0000E6FC5 /* QuessTheNumberGame */ = {
 			isa = PBXGroup;
 			children = (
-				173B65C72BBC27F0000E6FC5 /* AppDelegate.swift */,
-				173B65C92BBC27F0000E6FC5 /* SceneDelegate.swift */,
-				173B65CB2BBC27F0000E6FC5 /* ViewController.swift */,
-				173B65CD2BBC27F0000E6FC5 /* Main.storyboard */,
-				173B65D02BBC27F2000E6FC5 /* Assets.xcassets */,
+				173B65DB2BBC281F000E6FC5 /* App */,
+				173B65DC2BBC282E000E6FC5 /* Controller */,
+				173B65DD2BBC2852000E6FC5 /* Resources */,
 				173B65D22BBC27F2000E6FC5 /* LaunchScreen.storyboard */,
 				173B65D52BBC27F2000E6FC5 /* Info.plist */,
 			);
 			path = QuessTheNumberGame;
+			sourceTree = "<group>";
+		};
+		173B65DB2BBC281F000E6FC5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				173B65C72BBC27F0000E6FC5 /* AppDelegate.swift */,
+				173B65C92BBC27F0000E6FC5 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		173B65DC2BBC282E000E6FC5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				173B65CB2BBC27F0000E6FC5 /* ViewController.swift */,
+				173B65DE2BBC9696000E6FC5 /* AboutViewController.swift */,
+				173B65CD2BBC27F0000E6FC5 /* Main.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		173B65DD2BBC2852000E6FC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				173B65D02BBC27F2000E6FC5 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +167,7 @@
 			files = (
 				173B65CC2BBC27F0000E6FC5 /* ViewController.swift in Sources */,
 				173B65C82BBC27F0000E6FC5 /* AppDelegate.swift in Sources */,
+				173B65DF2BBC9696000E6FC5 /* AboutViewController.swift in Sources */,
 				173B65CA2BBC27F0000E6FC5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,11 +322,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuessTheNumberGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +336,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = FT.QuessTheNumberGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,11 +355,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuessTheNumberGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +369,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = FT.QuessTheNumberGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
